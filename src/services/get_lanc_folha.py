@@ -1,3 +1,5 @@
+import pandas as pd
+
 class GetLancFolha():
     def __init__(self, cursor):
         self._cursor = cursor
