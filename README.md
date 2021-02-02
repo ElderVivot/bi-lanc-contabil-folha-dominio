@@ -1,0 +1,1 @@
+#### Extract data Thomson Reuters - Dominio Sistemas and save in collection Mongo to read in BI
