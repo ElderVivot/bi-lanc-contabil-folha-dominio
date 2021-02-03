@@ -6,9 +6,9 @@ class GetLancFolha():
     def __init__(self, connection):
         self._connection = connection
 
-    def get(self):
+    def get(self, codiEmp):
         try:
-            dataframe = pd.read_sql_query("SELECT * FROM bethadba.ctlancto WHERE codi_emp = 5 AND orig_lan = 13", self._connection)
+            dataframe = pd.read_sql_query(f"SELECT * FROM bethadba.ctlancto WHERE codi_emp = {codiEmp} AND orig_lan = 13", self._connection)
             dataframe_to_json = json.loads(dataframe.to_json(orient='records', date_format='iso'))
             print(dataframe_to_json)
             # for data in dataframe_to_json:
